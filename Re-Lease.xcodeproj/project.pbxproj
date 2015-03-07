@@ -406,7 +406,7 @@
 				INFOPLIST_FILE = "Re-Lease/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/aloisbarreras/Documents/Development/Re-Lease/Re-Lease/Re-Lease-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Re-Lease/Re-Lease-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -422,7 +422,7 @@
 				INFOPLIST_FILE = "Re-Lease/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/aloisbarreras/Documents/Development/Re-Lease/Re-Lease/Re-Lease-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Re-Lease/Re-Lease-Bridging-Header.h";
 			};
 			name = Release;
 		};
