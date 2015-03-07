@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6214" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6207"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,31 +11,61 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015 Josip Injic. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
-                    <rect key="frame" x="20" y="439" width="441" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-Lease" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="140" width="441" height="43"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading_screen" translatesAutoresizingMaskIntoConstraints="NO" id="JQ9-i8-gPN">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left" translatesAutoresizingMaskIntoConstraints="NO" id="9zK-W8-ooT">
+                    <rect key="frame" x="104" y="158" width="136" height="164"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="9zK-W8-ooT" secondAttribute="height" multiplier="34:41" id="1Gd-qv-wgp"/>
+                        <constraint firstAttribute="height" constant="164" id="TdB-rg-keF"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="TdB-rg-keF"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="R2T-UN-hU3">
+                    <rect key="frame" x="240" y="158" width="136" height="164"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="164" id="n8l-Wm-91v"/>
+                        <constraint firstAttribute="width" secondItem="R2T-UN-hU3" secondAttribute="height" multiplier="34:41" id="pEO-mS-aRB"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="n8l-Wm-91v"/>
+                        </mask>
+                    </variation>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/3" constant="1" id="5cJ-9S-tgC"/>
-                <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
-                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
-                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
+                <constraint firstAttribute="centerY" secondItem="9zK-W8-ooT" secondAttribute="centerY" id="11W-jr-UCY"/>
+                <constraint firstItem="R2T-UN-hU3" firstAttribute="leading" secondItem="9zK-W8-ooT" secondAttribute="trailing" id="Az4-LF-bSf"/>
+                <constraint firstItem="JQ9-i8-gPN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JYi-L4-NjQ"/>
+                <constraint firstAttribute="centerY" secondItem="R2T-UN-hU3" secondAttribute="centerY" id="Pnw-kh-GN7"/>
+                <constraint firstAttribute="bottom" secondItem="JQ9-i8-gPN" secondAttribute="bottom" id="VdX-8I-dUg"/>
+                <constraint firstItem="JQ9-i8-gPN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bwu-iY-FgR"/>
+                <constraint firstItem="9zK-W8-ooT" firstAttribute="top" secondItem="R2T-UN-hU3" secondAttribute="top" id="o6G-iO-Fe9"/>
+                <constraint firstItem="9zK-W8-ooT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="104" id="o9b-aa-nKZ"/>
+                <constraint firstAttribute="trailing" secondItem="R2T-UN-hU3" secondAttribute="trailing" constant="104" id="vCF-zQ-pga"/>
+                <constraint firstItem="JQ9-i8-gPN" firstAttribute="centerY" secondItem="9zK-W8-ooT" secondAttribute="centerY" id="xiA-w6-Oc4"/>
+                <constraint firstAttribute="trailing" secondItem="JQ9-i8-gPN" secondAttribute="trailing" id="yb7-jm-cU5"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="xiA-w6-Oc4"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="left" width="462" height="554"/>
+        <image name="loading_screen" width="750" height="1334"/>
+        <image name="right" width="468" height="554"/>
+    </resources>
 </document>
