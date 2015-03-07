@@ -33,7 +33,7 @@ class CreatePostTableViewController: UITableViewController, CreatePostLocationSe
     
     lazy var dateFormatter: NSDateFormatter = {
         let df = NSDateFormatter()
-        df.dateFormat = "MMM dd"
+        df.dateFormat = "MMMM d"
         return df
     }()
     
@@ -86,7 +86,7 @@ class CreatePostTableViewController: UITableViewController, CreatePostLocationSe
     }
     
     func didTapDoneButton() {
-        
+        self.newPost.description = self.descriptionTextField.text
     }
     
     func savePost() {
