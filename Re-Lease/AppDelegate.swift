@@ -34,12 +34,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         myPostsNavController.tabBarItem = myPostsTabBarItem
         myPostsNavController.title = "My Posts"
         
+        let notificationViewController = NotificationsViewController()
+        let navigationViewController = UINavigationController(rootViewController: notificationViewController)
+        
         // current order or tab bar items should be
         // 1. Map View Controller
         // 2. My Posts View Controller
         // 3. Profile??
         // REMEMBER to put the nav controller in the array, not the contrllers themselves
-        tabBarController.viewControllers = [navController, myPostsNavController]
+        tabBarController.viewControllers = [navController, myPostsNavController, navigationViewController]
         
         // set the windown make it visible
         aWindow.rootViewController = tabBarController
