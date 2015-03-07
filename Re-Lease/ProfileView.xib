@@ -49,7 +49,7 @@
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpN-8W-4ws" customClass="BorderUIButton" customModule="Re_Lease" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpN-8W-4ws" customClass="BorderUIButton" customModule="Re_Lease" customModuleProvider="target">
                             <rect key="frame" x="179" y="403" width="193" height="42"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="193" id="O44-Ye-N0J"/>
@@ -71,7 +71,7 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="bpN-8W-4ws" firstAttribute="top" secondItem="yXi-F4-7UZ" secondAttribute="bottom" constant="50" id="777-Bk-uIn"/>
+                        <constraint firstItem="bpN-8W-4ws" firstAttribute="top" secondItem="yXi-F4-7UZ" secondAttribute="bottom" constant="20" id="777-Bk-uIn"/>
                         <constraint firstItem="Tyv-TM-quD" firstAttribute="top" secondItem="ycV-nH-HK0" secondAttribute="top" constant="29" id="GWJ-S6-r4O"/>
                         <constraint firstAttribute="centerX" secondItem="bpN-8W-4ws" secondAttribute="centerX" constant="-0.5" id="GZq-Ml-IUZ"/>
                         <constraint firstItem="yXi-F4-7UZ" firstAttribute="top" secondItem="eye-6J-VVv" secondAttribute="bottom" constant="8" id="JsI-Vx-Jeq"/>
