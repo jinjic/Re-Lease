@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatePostTableViewController" customModule="Re_Lease" customModuleProvider="target">
+            <connections>
+                <outlet property="electricButton" destination="s4R-HZ-hhr" id="sAv-xT-lxm"/>
+                <outlet property="gasButton" destination="PF3-Gs-GCo" id="S1C-Qm-7Rb"/>
+                <outlet property="waterButton" destination="N5g-FN-2Rq" id="uwo-uf-9re"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="115" id="Vmb-57-kwU">
+            <rect key="frame" x="0.0" y="0.0" width="206" height="115"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vmb-57-kwU" id="7UY-8W-HqH">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4R-HZ-hhr">
+                        <rect key="frame" x="8" y="22" width="58" height="58"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="58" id="6LM-nq-R8P"/>
+                            <constraint firstAttribute="height" constant="58" id="945-0V-9Fc"/>
+                        </constraints>
+                        <state key="normal" image="electric">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="selected" image="electric-selected"/>
+                    </button>
+                    <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5g-FN-2Rq">
+                        <rect key="frame" x="74" y="22" width="58" height="58"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="58" id="PMb-05-b69"/>
+                            <constraint firstAttribute="width" constant="58" id="lfn-CF-OhV"/>
+                        </constraints>
+                        <state key="normal" image="water">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="selected" image="water-selected"/>
+                    </button>
+                    <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PF3-Gs-GCo">
+                        <rect key="frame" x="140" y="22" width="58" height="58"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="58" id="VFO-CZ-XGq"/>
+                            <constraint firstAttribute="height" constant="58" id="XMi-lQ-rwf"/>
+                        </constraints>
+                        <state key="normal" image="gas">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="selected" image="gas-selected"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Included Utilities" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYz-Ui-sNd">
+                        <rect key="frame" x="65" y="93" width="77" height="13"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PF3-Gs-GCo" firstAttribute="leading" secondItem="N5g-FN-2Rq" secondAttribute="trailing" constant="8" symbolic="YES" id="Ejr-oZ-q0E"/>
+                    <constraint firstItem="s4R-HZ-hhr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7UY-8W-HqH" secondAttribute="leadingMargin" id="Os3-Cc-SkL"/>
+                    <constraint firstItem="N5g-FN-2Rq" firstAttribute="top" secondItem="s4R-HZ-hhr" secondAttribute="top" id="Pq9-sB-6iI"/>
+                    <constraint firstAttribute="centerX" secondItem="RYz-Ui-sNd" secondAttribute="centerX" id="TIz-SH-n3A"/>
+                    <constraint firstItem="PF3-Gs-GCo" firstAttribute="top" secondItem="N5g-FN-2Rq" secondAttribute="top" id="XC3-Lz-b5V"/>
+                    <constraint firstItem="PF3-Gs-GCo" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7UY-8W-HqH" secondAttribute="trailingMargin" id="ePi-TC-9X9"/>
+                    <constraint firstItem="RYz-Ui-sNd" firstAttribute="top" secondItem="N5g-FN-2Rq" secondAttribute="bottom" constant="13" id="kYv-ex-sRp"/>
+                    <constraint firstItem="RYz-Ui-sNd" firstAttribute="trailing" secondItem="7UY-8W-HqH" secondAttribute="trailingMargin" id="rxe-fH-6lt"/>
+                    <constraint firstItem="RYz-Ui-sNd" firstAttribute="leading" secondItem="7UY-8W-HqH" secondAttribute="leadingMargin" id="s6y-KE-MkA"/>
+                    <constraint firstAttribute="centerX" secondItem="N5g-FN-2Rq" secondAttribute="centerX" id="xPP-cf-Cld"/>
+                    <constraint firstItem="s4R-HZ-hhr" firstAttribute="top" secondItem="7UY-8W-HqH" secondAttribute="topMargin" constant="14" id="xrn-Ob-JkR"/>
+                    <constraint firstItem="N5g-FN-2Rq" firstAttribute="leading" secondItem="s4R-HZ-hhr" secondAttribute="trailing" constant="8" symbolic="YES" id="zds-sk-hRu"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Os3-Cc-SkL"/>
+                        <exclude reference="rxe-fH-6lt"/>
+                        <exclude reference="s6y-KE-MkA"/>
+                        <exclude reference="ePi-TC-9X9"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="475" y="395.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="electric" width="58" height="58"/>
+        <image name="electric-selected" width="58" height="58"/>
+        <image name="gas" width="58" height="58"/>
+        <image name="gas-selected" width="58" height="58"/>
+        <image name="water" width="58" height="58"/>
+        <image name="water-selected" width="58" height="58"/>
+    </resources>
+</document>
