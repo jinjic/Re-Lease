@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		029A44CF1AAACDA600D88781 /* DatePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029A44CE1AAACDA600D88781 /* DatePickerCell.xib */; };
 		029DBA521AAA889100F65019 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029DBA471AAA889100F65019 /* AudioToolbox.framework */; };
 		029DBA531AAA889100F65019 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029DBA481AAA889100F65019 /* CFNetwork.framework */; };
 		029DBA541AAA889100F65019 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029DBA491AAA889100F65019 /* CoreGraphics.framework */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		029A44CE1AAACDA600D88781 /* DatePickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerCell.xib; sourceTree = "<group>"; };
 		029DBA3C1AAA881400F65019 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../Downloads/parse-library-1/Bolts.framework"; sourceTree = "<group>"; };
 		029DBA3D1AAA881400F65019 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../Downloads/parse-library-1/Parse.framework"; sourceTree = "<group>"; };
 		029DBA3E1AAA881400F65019 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "../../../Downloads/parse-library-1/ParseCrashReporting.framework"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				029DBA6F1AAAA3F300F65019 /* MyPostsNoPostsView.xib */,
+				029A44CE1AAACDA600D88781 /* DatePickerCell.xib */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				029DBA701AAAA3F300F65019 /* MyPostsNoPostsView.xib in Resources */,
 				3C689ADC1AAA80B900B82314 /* LaunchScreen.xib in Resources */,
 				3C689AD91AAA80B900B82314 /* Images.xcassets in Resources */,
+				029A44CF1AAACDA600D88781 /* DatePickerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
