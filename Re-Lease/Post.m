@@ -11,6 +11,8 @@
 
 @implementation Post
 
+@dynamic description, rent, utilities, pets, startDate, endDate;
+
 + (void)load {
     dispatch_once_t onceToken = 0;
     dispatch_once(&onceToken, ^{

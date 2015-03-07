@@ -10,21 +10,29 @@ import UIKit
 
 class MyPostsTableViewController: UITableViewController, CreatePostDelegate {
     
-    var post: PFObject!
+    var createPostBarButtonItem: UIBarButtonItem!
+    var signInBarButtonItem: UIBarButtonItem!
+    
+    var posts: [Post]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
         
-        let createPostItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: Selector("presentCreatePostController"))
-        self.navigationItem.setRightBarButtonItems([createPostItem], animated: false)
+        self.createPostBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: Selector("presentCreatePostController"))
+        self.signInBarButtonItem = UIBarButtonItem(title: "Sign In", style: .Bordered, target: self, action: Selector("presentSignInController"))
+        if PFUser.currentUser() == nil {
+            self.navigationItem.rightBarButtonItem = self.signInBarButtonItem
+        } else {
+            self.navigationItem.rightBarButtonItem = self.createPostBarButtonItem
+        }
     }
     
     func createPostDidCancel() {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func createPostDidSave() {
+    func createPostDidSaveWithPost(post: Post) {
         
     }
 
@@ -32,7 +40,7 @@ class MyPostsTableViewController: UITableViewController, CreatePostDelegate {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         self.tableView.backgroundView = nil
-        if self.post == nil {
+        if self.posts == nil || self.posts?.count == 0  {
             let noPostsView = NSBundle.mainBundle().loadNibNamed("MyPostsNoPostsView", owner: self, options: nil)[0] as UIView
             self.tableView.backgroundView = noPostsView
             self.tableView.separatorStyle = .None
@@ -44,8 +52,6 @@ class MyPostsTableViewController: UITableViewController, CreatePostDelegate {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
         return 0
     }
     
@@ -54,5 +60,9 @@ class MyPostsTableViewController: UITableViewController, CreatePostDelegate {
         createPostController.delegate = self
         let createNavController = UINavigationController(rootViewController: createPostController)
         self.presentViewController(createNavController, animated: true, completion: nil)
+    }
+    
+    func presentSignInController() {
+        
     }
 }

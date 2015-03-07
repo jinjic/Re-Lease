@@ -10,42 +10,50 @@ import UIKit
 
 protocol CreatePostDelegate: class {
     func createPostDidCancel()
-    func createPostDidSave()
+    func createPostDidSaveWithPost(post: Post)
 }
 
 class CreatePostTableViewController: UITableViewController {
     
     weak var delegate: CreatePostDelegate!
+    var newPost = Post.object()
     
-    var nameCell: UITableViewCell = UITableViewCell()
+    var descriptionCell: UITableViewCell = UITableViewCell()
+    var rentCell: UITableViewCell = UITableViewCell()
     var utilitiesCell: UITableViewCell = UITableViewCell()
     var locationCell: UITableViewCell = UITableViewCell()
     
-    var nameTextField: UITextField = UITextField()
-    var utilitiesTextField: UITextField = UITextField()
+    var descriptionTextField: UITextField = UITextField()
+    var rentTextField: UITextField = UITextField()
     
     override func loadView() {
         super.loadView()
         self.tableView = UITableView(frame: self.view.bounds, style: .Grouped)
-        // construct first name cell, section 0, row 0
-        self.nameCell.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5)
-        self.nameTextField = UITextField(frame: CGRectInset(self.nameCell.contentView.bounds, 15, 0))
-        self.nameTextField.placeholder = "Name"
-        self.nameCell.addSubview(self.nameTextField)
+        // description cell
+        self.descriptionCell.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5)
+        self.descriptionTextField = UITextField(frame: CGRectInset(self.descriptionCell.contentView.bounds, 15, 0))
+        self.descriptionTextField.placeholder = "Describe Your Home"
+        self.descriptionCell.addSubview(self.descriptionTextField)
         
-        // construct last name cell, section 0, row 1
+        // rent cell
+        self.rentCell.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5)
+        self.rentTextField = UITextField(frame: CGRectInset(self.rentCell.contentView.bounds, 15, 0))
+        self.rentTextField.placeholder = "How much do you pay?"
+        self.rentCell.addSubview(self.rentTextField)
+        
+        // utilities cell
+        self.utilitiesCell.textLabel?.text = "Find Location"
         self.utilitiesCell.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5)
-        self.utilitiesTextField = UITextField(frame: CGRectInset(self.utilitiesCell.contentView.bounds, 15, 0))
-        self.utilitiesTextField.placeholder = "Utilities?"
-        self.utilitiesCell.addSubview(self.utilitiesTextField)
         
-        // construct share cell, section 1, row 0
+        // location cell
         self.locationCell.textLabel?.text = "Find Location"
         self.locationCell.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "Create"
         
         let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: Selector("didTapCancelButton"))
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: Selector("didTapDoneButton"))
@@ -58,9 +66,12 @@ class CreatePostTableViewController: UITableViewController {
     }
     
     func didTapDoneButton() {
-        self.delegate.createPostDidSave()
+        
     }
     
+    func savePost() {
+        self.delegate.createPostDidSaveWithPost(self.newPost)
+    }
     
     // MARK: - Table view data source
     
@@ -82,14 +93,29 @@ class CreatePostTableViewController: UITableViewController {
         case 0:
             switch(indexPath.row) {
             case 0:
-                return self.nameCell
+                return self.descriptionCell
             case 1:
-                return self.utilitiesCell
+                return self.rentCell
             case 2:
+                return self.utilitiesCell
+            case 3:
                 return self.locationCell
             default: fatalError("Unknown row in section 0")
             }
         default: fatalError("Unknown section")
+        }
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "What"
+        case 1:
+            return "When"
+        case 2:
+            return "Where"
+        default:
+            fatalError("Unexpected index for title")
         }
     }
 }
