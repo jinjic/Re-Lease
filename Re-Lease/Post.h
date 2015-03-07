@@ -18,5 +18,6 @@
 @property (nonatomic, strong) NSArray *utilities;
 @property (nonatomic, strong) NSDate *startDate;
 @property (nonatomic, strong) NSDate *endDate;
+@property (nonatomic, strong) PFUser *user;
 
 @end

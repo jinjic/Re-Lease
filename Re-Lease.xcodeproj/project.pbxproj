@@ -10,6 +10,14 @@
 		020CCF841AAB052F00E95144 /* PostDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020CCF831AAB052F00E95144 /* PostDetailView.xib */; };
 		020CCF861AAB1BFE00E95144 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020CCF851AAB1BFE00E95144 /* MainTabBarViewController.swift */; };
 		020CCF881AAB1DAD00E95144 /* AnimationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020CCF871AAB1DAD00E95144 /* AnimationView.xib */; };
+		020CCF8B1AAB31A400E95144 /* UserChat.m in Sources */ = {isa = PBXBuildFile; fileRef = 020CCF8A1AAB31A400E95144 /* UserChat.m */; };
+		020CCF8E1AAB324D00E95144 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 020CCF8D1AAB324D00E95144 /* Message.m */; };
+		020CCF901AAB355500E95144 /* PreLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020CCF8F1AAB355500E95144 /* PreLoginView.xib */; };
+		020CCF921AAB369B00E95144 /* BorderUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020CCF911AAB369B00E95144 /* BorderUIButton.swift */; };
+		020CCF941AAB375200E95144 /* PreLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020CCF931AAB375200E95144 /* PreLoginViewController.swift */; };
+		020CCF971AAB388500E95144 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020CCF951AAB388500E95144 /* LogInViewController.swift */; };
+		020CCF981AAB388500E95144 /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020CCF961AAB388500E95144 /* LogInViewController.xib */; };
+		020CCF9A1AAB39A200E95144 /* BorderUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020CCF991AAB39A200E95144 /* BorderUITextField.swift */; };
 		029A44CF1AAACDA600D88781 /* DatePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029A44CE1AAACDA600D88781 /* DatePickerCell.xib */; };
 		029A44D11AAAD7DF00D88781 /* CreatePostLocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A44D01AAAD7DF00D88781 /* CreatePostLocationSearchTableViewController.swift */; };
 		029A44D41AAAD90F00D88781 /* PostLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 029A44D31AAAD90F00D88781 /* PostLocation.m */; };
@@ -59,6 +67,16 @@
 		020CCF831AAB052F00E95144 /* PostDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostDetailView.xib; sourceTree = "<group>"; };
 		020CCF851AAB1BFE00E95144 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		020CCF871AAB1DAD00E95144 /* AnimationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimationView.xib; sourceTree = "<group>"; };
+		020CCF891AAB31A400E95144 /* UserChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserChat.h; sourceTree = "<group>"; };
+		020CCF8A1AAB31A400E95144 /* UserChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserChat.m; sourceTree = "<group>"; };
+		020CCF8C1AAB324D00E95144 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		020CCF8D1AAB324D00E95144 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		020CCF8F1AAB355500E95144 /* PreLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreLoginView.xib; sourceTree = "<group>"; };
+		020CCF911AAB369B00E95144 /* BorderUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderUIButton.swift; sourceTree = "<group>"; };
+		020CCF931AAB375200E95144 /* PreLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreLoginViewController.swift; sourceTree = "<group>"; };
+		020CCF951AAB388500E95144 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		020CCF961AAB388500E95144 /* LogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
+		020CCF991AAB39A200E95144 /* BorderUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderUITextField.swift; sourceTree = "<group>"; };
 		029A44CE1AAACDA600D88781 /* DatePickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerCell.xib; sourceTree = "<group>"; };
 		029A44D01AAAD7DF00D88781 /* CreatePostLocationSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostLocationSearchTableViewController.swift; sourceTree = "<group>"; };
 		029A44D21AAAD90F00D88781 /* PostLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostLocation.h; sourceTree = "<group>"; };
@@ -172,11 +190,13 @@
 			isa = PBXGroup;
 			children = (
 				020CCF871AAB1DAD00E95144 /* AnimationView.xib */,
-				029DBA6F1AAAA3F300F65019 /* MyPostsNoPostsView.xib */,
 				029A44CE1AAACDA600D88781 /* DatePickerCell.xib */,
+				020CCF961AAB388500E95144 /* LogInViewController.xib */,
 				029A44D51AAAE00D00D88781 /* MapItemCell.xib */,
-				029A44D71AAAE6A500D88781 /* UtilitiesCell.xib */,
+				029DBA6F1AAAA3F300F65019 /* MyPostsNoPostsView.xib */,
 				020CCF831AAB052F00E95144 /* PostDetailView.xib */,
+				020CCF8F1AAB355500E95144 /* PreLoginView.xib */,
+				029A44D71AAAE6A500D88781 /* UtilitiesCell.xib */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";
@@ -188,6 +208,10 @@
 				029DBA731AAAB90A00F65019 /* Post.m */,
 				029A44D21AAAD90F00D88781 /* PostLocation.h */,
 				029A44D31AAAD90F00D88781 /* PostLocation.m */,
+				020CCF891AAB31A400E95144 /* UserChat.h */,
+				020CCF8A1AAB31A400E95144 /* UserChat.m */,
+				020CCF8C1AAB324D00E95144 /* Message.h */,
+				020CCF8D1AAB324D00E95144 /* Message.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -215,13 +239,17 @@
 			isa = PBXGroup;
 			children = (
 				3C689AD11AAA80B900B82314 /* AppDelegate.swift */,
-				3CC2CB751AAB0FAC00EF6C61 /* ListingsViewController.swift */,
-				3CC2CB731AAB0F8700EF6C61 /* ProfileViewController.swift */,
+				020CCF911AAB369B00E95144 /* BorderUIButton.swift */,
+				020CCF991AAB39A200E95144 /* BorderUITextField.swift */,
 				029A44D01AAAD7DF00D88781 /* CreatePostLocationSearchTableViewController.swift */,
 				029DBA6B1AAA9AC900F65019 /* CreatePostTableViewController.swift */,
+				3CC2CB751AAB0FAC00EF6C61 /* ListingsViewController.swift */,
+				020CCF951AAB388500E95144 /* LogInViewController.swift */,
 				020CCF851AAB1BFE00E95144 /* MainTabBarViewController.swift */,
 				029DBA6D1AAA9C8A00F65019 /* MyPostsTableViewController.swift */,
 				3C689AF11AAAA73400B82314 /* NotificationsViewController.swift */,
+				020CCF931AAB375200E95144 /* PreLoginViewController.swift */,
+				3CC2CB731AAB0F8700EF6C61 /* ProfileViewController.swift */,
 				3C689AD31AAA80B900B82314 /* ViewController.swift */,
 				3C689AD81AAA80B900B82314 /* Images.xcassets */,
 				3C689ADA1AAA80B900B82314 /* LaunchScreen.xib */,
@@ -342,7 +370,9 @@
 				029A44D61AAAE00D00D88781 /* MapItemCell.xib in Resources */,
 				020CCF841AAB052F00E95144 /* PostDetailView.xib in Resources */,
 				029DBA701AAAA3F300F65019 /* MyPostsNoPostsView.xib in Resources */,
+				020CCF981AAB388500E95144 /* LogInViewController.xib in Resources */,
 				3C689ADC1AAA80B900B82314 /* LaunchScreen.xib in Resources */,
+				020CCF901AAB355500E95144 /* PreLoginView.xib in Resources */,
 				020CCF881AAB1DAD00E95144 /* AnimationView.xib in Resources */,
 				3C689AD91AAA80B900B82314 /* Images.xcassets in Resources */,
 				029A44CF1AAACDA600D88781 /* DatePickerCell.xib in Resources */,
@@ -363,16 +393,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				020CCF8B1AAB31A400E95144 /* UserChat.m in Sources */,
 				029A44D41AAAD90F00D88781 /* PostLocation.m in Sources */,
 				3C689AD41AAA80B900B82314 /* ViewController.swift in Sources */,
 				029DBA741AAAB90A00F65019 /* Post.m in Sources */,
 				020CCF861AAB1BFE00E95144 /* MainTabBarViewController.swift in Sources */,
 				3C689AF21AAAA73400B82314 /* NotificationsViewController.swift in Sources */,
 				3C689AD21AAA80B900B82314 /* AppDelegate.swift in Sources */,
+				020CCF9A1AAB39A200E95144 /* BorderUITextField.swift in Sources */,
 				029DBA6E1AAA9C8A00F65019 /* MyPostsTableViewController.swift in Sources */,
 				3CC2CB741AAB0F8700EF6C61 /* ProfileViewController.swift in Sources */,
+				020CCF941AAB375200E95144 /* PreLoginViewController.swift in Sources */,
 				029A44D11AAAD7DF00D88781 /* CreatePostLocationSearchTableViewController.swift in Sources */,
 				029DBA6C1AAA9AC900F65019 /* CreatePostTableViewController.swift in Sources */,
+				020CCF971AAB388500E95144 /* LogInViewController.swift in Sources */,
+				020CCF921AAB369B00E95144 /* BorderUIButton.swift in Sources */,
+				020CCF8E1AAB324D00E95144 /* Message.m in Sources */,
 				3CC2CB761AAB0FAC00EF6C61 /* ListingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

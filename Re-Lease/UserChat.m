@@ -1,17 +1,17 @@
 //
-//  Post.m
+//  UserChat.m
 //  Re-Lease
 //
-//  Created by Alois Barreras on 3/6/15.
+//  Created by Alois Barreras on 3/7/15.
 //  Copyright (c) 2015 Josip Injic. All rights reserved.
 //
 
-#import "Post.h"
+#import "UserChat.h"
 #import <Parse/PFObject+Subclass.h>
 
-@implementation Post
+@implementation UserChat
 
-@dynamic name, rent, utilities, startDate, endDate, location, user;
+@dynamic description, roomId, user;
 
 + (void)load {
     dispatch_once_t onceToken = 0;
@@ -21,7 +21,7 @@
 }
 
 + (NSString *)parseClassName {
-    return @"Post";
+    return @"UserChat";
 }
 
 @end

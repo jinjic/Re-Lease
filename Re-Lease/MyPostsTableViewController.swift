@@ -21,6 +21,10 @@ class MyPostsTableViewController: UITableViewController, CreatePostDelegate {
         
         self.createPostBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: Selector("presentCreatePostController"))
         self.signInBarButtonItem = UIBarButtonItem(title: "Sign In", style: .Bordered, target: self, action: Selector("presentSignInController"))
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         if PFUser.currentUser() == nil {
             self.navigationItem.rightBarButtonItem = self.signInBarButtonItem
         } else {
@@ -62,6 +66,8 @@ class MyPostsTableViewController: UITableViewController, CreatePostDelegate {
     }
     
     func presentSignInController() {
-        
+        let preLogin = PreLoginViewController(nibName: "PreLoginView", bundle: nil)
+        let navController = UINavigationController(rootViewController: preLogin)
+        self.presentViewController(navController, animated: true, completion: nil)
     }
 }
