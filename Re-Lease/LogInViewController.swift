@@ -20,6 +20,11 @@ class LogInViewController: UIViewController {
         
         self.usernameTextField.attributedPlaceholder = NSAttributedString(string: self.usernameTextField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.whiteColor()])
         self.passwordTextField.attributedPlaceholder = NSAttributedString(string: self.passwordTextField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.whiteColor()])
+        let tapGesture = UITapGestureRecognizer(target: self, action:Selector("dismissKeyboard:"))
+    }
+    
+    func dismissKeyboard(gesture: UITapGestureRecognizer) {
+        self.view.endEditing(true)
     }
     
     @IBAction func didTapLogInButton(sender: AnyObject) {

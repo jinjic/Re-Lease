@@ -10,10 +10,14 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet var profilePicture: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        profilePicture.layer.borderColor = UIColor.whiteColor().CGColor
+        profilePicture.layer.borderWidth = 1
+        profilePicture.clipsToBounds = true
+        profilePicture.layer.cornerRadius = 50
     }
 
     override func didReceiveMemoryWarning() {

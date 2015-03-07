@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Re_Lease" customModuleProvider="target">
             <connections>
+                <outlet property="profilePicture" destination="Tyv-TM-quD" id="WJA-x1-GVz"/>
                 <outlet property="view" destination="iN0-l3-epB" id="110-x0-5a9"/>
             </connections>
         </placeholder>

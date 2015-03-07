@@ -31,8 +31,6 @@ class ListingsViewController: PFQueryTableViewController {
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!, object: PFObject!) -> PFTableViewCell! {
         var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? PFTableViewCell
         let post = object as Post
-
-        cell?.imageView?.image = UIImage(named: "josipsucks\(indexPath.row )")
         
         if(cell == nil) {
             cell = PFTableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: cellIdentifier)
@@ -63,19 +61,9 @@ class ListingsViewController: PFQueryTableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         if(segue.identifier == "indiePost") {
             var vc = segue.destinationViewController as IndiePostViewController
         
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-
-
 }
