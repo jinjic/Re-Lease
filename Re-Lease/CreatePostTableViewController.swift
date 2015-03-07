@@ -13,15 +13,16 @@ protocol CreatePostDelegate: class {
     func createPostDidSaveWithPost(post: Post)
 }
 
-class CreatePostTableViewController: UITableViewController {
+class CreatePostTableViewController: UITableViewController, CreatePostLocationSearchDelegate {
     
     weak var delegate: CreatePostDelegate!
     var newPost = Post.object()
     
     var descriptionCell = UITableViewCell()
     var rentCell = UITableViewCell()
-    var utilitiesCell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: nil)
+    var utilitiesCell: UITableViewCell!
     var locationCell = UITableViewCell(style: .Default, reuseIdentifier: "DefaultLocationCell")
+    var postLocationCell = UITableViewCell(style: .Subtitle, reuseIdentifier: "PostLocationCell")
     var startDateCell = UITableViewCell(style: .Value1, reuseIdentifier: "DateCell")
     var endDateCell = UITableViewCell(style: .Value1, reuseIdentifier: "DateCell")
     
@@ -31,7 +32,7 @@ class CreatePostTableViewController: UITableViewController {
     var datePickerIndexPath: NSIndexPath?
     
     lazy var dateFormatter: NSDateFormatter = {
-        var df = NSDateFormatter()
+        let df = NSDateFormatter()
         df.dateFormat = "MMM dd"
         return df
     }()
@@ -51,15 +52,13 @@ class CreatePostTableViewController: UITableViewController {
         self.rentCell.addSubview(self.rentTextField)
         
         // utilities cell
-        self.utilitiesCell.textLabel?.text = "Utilities"
-        self.utilitiesCell.detailTextLabel?.text = "None"
-        self.utilitiesCell.accessoryType = .DisclosureIndicator
+        self.utilitiesCell = NSBundle.mainBundle().loadNibNamed("UtilitiesCell", owner: self, options: nil)[0] as UITableViewCell
         
         // date cells
-        self.startDateCell.textLabel?.text = "Lease Start"
+        self.startDateCell.textLabel?.text = "Start"
         self.startDateCell.detailTextLabel?.text = self.dateFormatter.stringFromDate(NSDate())
         
-        self.endDateCell.textLabel?.text = "Lease End"
+        self.endDateCell.textLabel?.text = "End"
         self.endDateCell.detailTextLabel?.text = self.dateFormatter.stringFromDate(NSDate())
         
         // location cell
@@ -76,6 +75,10 @@ class CreatePostTableViewController: UITableViewController {
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: Selector("didTapDoneButton"))
         self.navigationItem.leftBarButtonItem = cancelButton
         self.navigationItem.rightBarButtonItem = doneButton
+        
+        self.electricButton.addTarget(self, action: Selector("didTapButton:"), forControlEvents: .TouchUpInside)
+                self.waterButton.addTarget(self, action: Selector("didTapButton:"), forControlEvents: .TouchUpInside)
+                self.gasButton.addTarget(self, action: Selector("didTapButton:"), forControlEvents: .TouchUpInside)
     }
     
     func didTapCancelButton() {
@@ -153,7 +156,13 @@ class CreatePostTableViewController: UITableViewController {
         case 2:
             switch indexPath.row {
             case 0:
-                return self.locationCell
+                if self.newPost.location == nil {
+                    return self.locationCell
+                } else {
+                    self.postLocationCell.textLabel?.text = self.newPost.location.name
+                    self.postLocationCell.detailTextLabel?.text = self.newPost.location.address
+                    return self.postLocationCell
+                }
             default:
                 return UITableViewCell()
             }
@@ -188,8 +197,21 @@ class CreatePostTableViewController: UITableViewController {
             }
             tableView.endUpdates()
         } else if cell?.reuseIdentifier == "DefaultLocationCell" || cell?.reuseIdentifier == "PostLocationCell" {
-            self.performSegueWithIdentifier("LocationSearchSegue", sender: self)
+            let locationSearchController = CreatePostLocationSearchTableViewController()
+            locationSearchController.searchDelegate = self
+            let navController = UINavigationController(rootViewController: locationSearchController)
+            self.presentViewController(navController, animated: true, completion: nil)
         }
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath == self.datePickerIndexPath {
+            return 216
+        } else if indexPath.section == 0 && indexPath.row == 2 {
+            return 115
+        }
+        
+        return tableView.rowHeight
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -197,12 +219,24 @@ class CreatePostTableViewController: UITableViewController {
         case 0:
             return "What"
         case 1:
-            return "When"
+            return "Availability"
         case 2:
             return "Where"
         default:
             fatalError("Unexpected index for title")
         }
+    }
+    
+    // MARK: - Location Search Delegate
+    
+    func locationSearchDidSelectPostLocation(postLocation: PostLocation) {
+        self.newPost.location = postLocation
+        self.tableView.reloadSections(NSIndexSet(index: 2), withRowAnimation: .Automatic)
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func locationSearchDidCancel() {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     // MARK: - DatePicker Delegate
@@ -219,6 +253,21 @@ class CreatePostTableViewController: UITableViewController {
             } else {
                 self.newPost.endDate = datePicker.date
             }
+        }
+    }
+    
+    // MARK: - IBAction for Buttons
+    
+    @IBOutlet var electricButton: UIButton!
+    @IBOutlet var waterButton: UIButton!
+    @IBOutlet var gasButton: UIButton!
+    
+    func didTapButton(sender: UIButton) {
+        sender.selected = sender.selected ? false : true
+        if sender.selected {
+            sender.alpha = 1
+        } else {
+            sender.alpha = 0.3
         }
     }
     

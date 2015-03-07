@@ -8,10 +8,13 @@
 
 #import <Parse/Parse.h>
 
+@class PostLocation;
+
 @interface Post : PFObject <PFSubclassing>
 
 @property (nonatomic, copy) NSString *description;
 @property (nonatomic, copy) NSString *rent;
+@property (nonatomic, strong) PostLocation *location;
 @property (nonatomic, strong) NSArray *utilities;
 @property (nonatomic, strong) NSDate *startDate;
 @property (nonatomic, strong) NSDate *endDate;
