@@ -50,8 +50,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         super.viewDidLoad()
         navigationItem.title = "Map"
         
-        navigationItem.setRightBarButtonItem(UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Organize , target: self, action: "notificationsClicked"), animated: true)
-        
         view.backgroundColor = UIColor.whiteColor()
         self.setupManager()
         
@@ -161,11 +159,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         manager.delegate = nil
     }
     
-    func notificationsClicked() {
-        
-        let notificaitonsViewController: notificationsViewController = notificationsViewController()
-        self.navigationController?.pushViewController(notificaitonsViewController, animated: true)
-    }
+
     
 }
 
