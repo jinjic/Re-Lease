@@ -25,6 +25,7 @@
 		029DBA681AAA935A00F65019 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029DBA631AAA935A00F65019 /* ParseUI.framework */; };
 		029DBA6C1AAA9AC900F65019 /* CreatePostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029DBA6B1AAA9AC900F65019 /* CreatePostTableViewController.swift */; };
 		029DBA6E1AAA9C8A00F65019 /* MyPostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029DBA6D1AAA9C8A00F65019 /* MyPostsTableViewController.swift */; };
+		029DBA701AAAA3F300F65019 /* MyPostsNoPostsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029DBA6F1AAAA3F300F65019 /* MyPostsNoPostsView.xib */; };
 		3C689AD21AAA80B900B82314 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C689AD11AAA80B900B82314 /* AppDelegate.swift */; };
 		3C689AD41AAA80B900B82314 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C689AD31AAA80B900B82314 /* ViewController.swift */; };
 		3C689AD91AAA80B900B82314 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C689AD81AAA80B900B82314 /* Images.xcassets */; };
@@ -67,6 +68,7 @@
 		029DBA631AAA935A00F65019 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "Re-Lease/ParseUI.framework"; sourceTree = "<group>"; };
 		029DBA6B1AAA9AC900F65019 /* CreatePostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreatePostTableViewController.swift; path = ../CreatePostTableViewController.swift; sourceTree = "<group>"; };
 		029DBA6D1AAA9C8A00F65019 /* MyPostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostsTableViewController.swift; sourceTree = "<group>"; };
+		029DBA6F1AAAA3F300F65019 /* MyPostsNoPostsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPostsNoPostsView.xib; sourceTree = "<group>"; };
 		3C689ACC1AAA80B900B82314 /* Re-Lease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Re-Lease.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C689AD01AAA80B900B82314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C689AD11AAA80B900B82314 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		029DBA5E1AAA8CBF00F65019 /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
+				029DBA6F1AAAA3F300F65019 /* MyPostsNoPostsView.xib */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				029DBA701AAAA3F300F65019 /* MyPostsNoPostsView.xib in Resources */,
 				3C689ADC1AAA80B900B82314 /* LaunchScreen.xib in Resources */,
 				3C689AD91AAA80B900B82314 /* Images.xcassets in Resources */,
 			);

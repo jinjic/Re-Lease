@@ -27,8 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         let navController = UINavigationController(rootViewController: homeScreen)
         
         // My Posts Setup
-        let myPostsTableViewController = MyPostsTableViewController()
+        let myPostsTableViewController = MyPostsTableViewController(style: UITableViewStyle.Grouped)
         let myPostsNavController = UINavigationController(rootViewController: myPostsTableViewController)
+        let myPostsTabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.TopRated, tag: 0)
+        myPostsNavController.tabBarItem = myPostsTabBarItem
+        myPostsNavController.title = "My Posts"
         
         // current order or tab bar items should be
         // 1. Map View Controller
@@ -36,11 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         // 3. Profile??
         // REMEMBER to put the nav controller in the array, not the contrllers themselves
         tabBarController.viewControllers = [navController, myPostsNavController]
-        
-        // Set the tab bar items
-        // make sure they're the same order as the view controllers to which they correspond
-        tabBarController.toolbarItems = []
-        
         
         // set the windown make it visible
         aWindow.rootViewController = tabBarController
