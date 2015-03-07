@@ -17,7 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // DON'T put anything above this line!!
         Parse.setApplicationId("Rk1d1SEHNmOUlwT76B2uQW6QslXguSw4KbmM6PHk", clientKey: "IQYqfqgdyJaADL7WWhIxskOWyLBN8N7GccJd1oRi")
-        // Override point for customization after application launch.
+        
+        let aWindow = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window = aWindow
+        
+        let tabBarController: UITabBarController = UITabBarController()
+        
+        let homeScreen = ViewController()
+        let navController = UINavigationController(rootViewController: homeScreen)
+        navController.navigationBarHidden = true
+        tabBarController.viewControllers = [navController]
+        aWindow.rootViewController = tabBarController
+        
+        aWindow.makeKeyAndVisible()
+        
         return true
     }
 

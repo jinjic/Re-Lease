@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
 //MARK:- Properties
     
