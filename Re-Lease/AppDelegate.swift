@@ -9,10 +9,9 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegate {
 
     var window: UIWindow?
-
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // DON'T put anything above this line!!
@@ -23,12 +22,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tabBarController: UITabBarController = UITabBarController()
         
+        // Map View Setup
         let homeScreen = ViewController()
         let navController = UINavigationController(rootViewController: homeScreen)
-        navController.navigationBarHidden = true
-        tabBarController.viewControllers = [navController]
-        aWindow.rootViewController = tabBarController
         
+        // My Posts Setup
+        let myPostsTableViewController = MyPostsTableViewController()
+        let myPostsNavController = UINavigationController(rootViewController: myPostsTableViewController)
+        
+        // current order or tab bar items should be
+        // 1. Map View Controller
+        // 2. My Posts View Controller
+        // 3. Profile??
+        // REMEMBER to put the nav controller in the array, not the contrllers themselves
+        tabBarController.viewControllers = [navController, myPostsNavController]
+        
+        // Set the tab bar items
+        // make sure they're the same order as the view controllers to which they correspond
+        tabBarController.toolbarItems = []
+        
+        
+        // set the windown make it visible
+        aWindow.rootViewController = tabBarController
         aWindow.makeKeyAndVisible()
         
         return true
@@ -55,7 +70,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
