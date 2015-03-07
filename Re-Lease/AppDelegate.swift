@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         myNotificationTabBarItem.title = "Notifications"
         
         // My Profile Setup
-        let myProfile = ProfileViewController(style: UITableViewStyle.Grouped)
+        let myProfile = ProfileViewController(nibName: "ProfileView", bundle: nil)
         let myProfileNavController = UINavigationController(rootViewController: myProfile)
         let myProfileTabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profile"), tag: 0)
         myProfileNavController.tabBarItem = myProfileTabBarItem

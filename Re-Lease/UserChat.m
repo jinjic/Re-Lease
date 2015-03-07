@@ -11,7 +11,7 @@
 
 @implementation UserChat
 
-@dynamic description, roomId, user;
+@dynamic desc, roomId, user, lastMessage;
 
 + (void)load {
     dispatch_once_t onceToken = 0;

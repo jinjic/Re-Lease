@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7519.1" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7513.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MessageTableViewCell" rowHeight="48" id="neg-NS-RKD" customClass="MessageTableViewCell" customModule="Vicino" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="48"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="neg-NS-RKD" id="2za-Yt-xE1">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3z-td-CTc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="48"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bubble_regular" translatesAutoresizingMaskIntoConstraints="NO" id="i5G-uK-LGm">
+                                <rect key="frame" x="514" y="7" width="78" height="35"/>
+                                <rect key="contentStretch" x="0.5" y="0.5" width="0.0" height="0.0"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nU2-Wi-qui">
+                                <rect key="frame" x="530" y="15" width="40" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="b6Q-FI-CwY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="b6Q-FI-CwY"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nU2-Wi-qui" firstAttribute="top" secondItem="p3z-td-CTc" secondAttribute="top" constant="15" id="2mu-kL-5MC"/>
+                            <constraint firstItem="i5G-uK-LGm" firstAttribute="centerX" secondItem="nU2-Wi-qui" secondAttribute="centerX" constant="3" id="PfG-N5-3Rh"/>
+                            <constraint firstAttribute="bottom" secondItem="nU2-Wi-qui" secondAttribute="bottom" constant="16" id="QWf-lM-lcp"/>
+                            <constraint firstItem="i5G-uK-LGm" firstAttribute="centerY" secondItem="nU2-Wi-qui" secondAttribute="centerY" constant="0.5" id="Req-Y2-lg9"/>
+                            <constraint firstAttribute="trailing" secondItem="i5G-uK-LGm" secondAttribute="trailing" constant="8" id="YWV-LX-hx6"/>
+                            <constraint firstAttribute="trailing" secondItem="nU2-Wi-qui" secondAttribute="trailing" constant="30" id="crA-Xm-ToB"/>
+                            <constraint firstItem="nU2-Wi-qui" firstAttribute="width" relation="lessThanOrEqual" secondItem="p3z-td-CTc" secondAttribute="width" multiplier="3:4" id="qax-iv-4ff"/>
+                            <constraint firstItem="i5G-uK-LGm" firstAttribute="top" secondItem="p3z-td-CTc" secondAttribute="top" constant="7" id="uH9-sf-HzX"/>
+                            <constraint firstAttribute="bottom" secondItem="i5G-uK-LGm" secondAttribute="bottom" constant="6" id="zHq-mR-cav"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Req-Y2-lg9"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="p3z-td-CTc" firstAttribute="top" secondItem="2za-Yt-xE1" secondAttribute="top" id="Dgh-Wh-lnD"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="p3z-td-CTc" secondAttribute="bottom" constant="-9" id="c5Z-q6-cXr"/>
+                    <constraint firstItem="p3z-td-CTc" firstAttribute="leading" secondItem="2za-Yt-xE1" secondAttribute="leading" id="i13-Jo-hln"/>
+                    <constraint firstAttribute="trailing" secondItem="p3z-td-CTc" secondAttribute="trailing" id="jEy-HL-64v"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bubbleImageView" destination="i5G-uK-LGm" id="FKO-Eu-0gg"/>
+                <outlet property="messageBodyLabel" destination="nU2-Wi-qui" id="xbW-IP-cAi"/>
+            </connections>
+            <point key="canvasLocation" x="382" y="377"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bubble_regular" width="56" height="35"/>
+    </resources>
+</document>
