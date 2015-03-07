@@ -50,7 +50,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         super.viewDidLoad()
         navigationItem.title = "Map"
         
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationItem.setRightBarButtonItem(UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Organize , target: self, action: "notificationsClicked"), animated: true)
+        
         view.backgroundColor = UIColor.whiteColor()
         self.setupManager()
         
@@ -73,7 +74,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         NSLayoutConstraint.activateConstraints(constraints)
     }
     
-    //MARK:- Location
+//MARK:- Location
     
     func setupManager() {
         //Setup our Map View
@@ -158,6 +159,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         manager.delegate = nil
+    }
+    
+    func notificationsClicked() {
+        
+        let notificaitonsViewController: notificationsViewController = notificationsViewController()
+        self.navigationController?.pushViewController(notificaitonsViewController, animated: true)
     }
     
 }

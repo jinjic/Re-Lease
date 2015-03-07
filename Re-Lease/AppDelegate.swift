@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         // Map View Setup
         let homeScreen = ViewController()
         let navController = UINavigationController(rootViewController: homeScreen)
+        navController.setNavigationBarHidden(false, animated: true)
         
         // My Posts Setup
         let myPostsTableViewController = MyPostsTableViewController()
@@ -36,11 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         // 3. Profile??
         // REMEMBER to put the nav controller in the array, not the contrllers themselves
         tabBarController.viewControllers = [navController, myPostsNavController]
-        
-        // Set the tab bar items
-        // make sure they're the same order as the view controllers to which they correspond
-        tabBarController.toolbarItems = []
-        
         
         // set the windown make it visible
         aWindow.rootViewController = tabBarController

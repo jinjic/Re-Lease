@@ -30,6 +30,7 @@
 		3C689AD91AAA80B900B82314 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C689AD81AAA80B900B82314 /* Images.xcassets */; };
 		3C689ADC1AAA80B900B82314 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C689ADA1AAA80B900B82314 /* LaunchScreen.xib */; };
 		3C689AE81AAA80B900B82314 /* Re_LeaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C689AE71AAA80B900B82314 /* Re_LeaseTests.swift */; };
+		3C689AF21AAAA73400B82314 /* notificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C689AF11AAAA73400B82314 /* notificationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		3C689AE11AAA80B900B82314 /* Re-LeaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Re-LeaseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C689AE61AAA80B900B82314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C689AE71AAA80B900B82314 /* Re_LeaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Re_LeaseTests.swift; sourceTree = "<group>"; };
+		3C689AF11AAAA73400B82314 /* notificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = notificationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				029DBA6B1AAA9AC900F65019 /* CreatePostTableViewController.swift */,
 				029DBA6D1AAA9C8A00F65019 /* MyPostsTableViewController.swift */,
 				3C689AD31AAA80B900B82314 /* ViewController.swift */,
+				3C689AF11AAAA73400B82314 /* notificationsViewController.swift */,
 				3C689AD81AAA80B900B82314 /* Images.xcassets */,
 				3C689ADA1AAA80B900B82314 /* LaunchScreen.xib */,
 				029DBA5E1AAA8CBF00F65019 /* Nibs */,
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C689AD41AAA80B900B82314 /* ViewController.swift in Sources */,
+				3C689AF21AAAA73400B82314 /* notificationsViewController.swift in Sources */,
 				3C689AD21AAA80B900B82314 /* AppDelegate.swift in Sources */,
 				029DBA6E1AAA9C8A00F65019 /* MyPostsTableViewController.swift in Sources */,
 				029DBA6C1AAA9AC900F65019 /* CreatePostTableViewController.swift in Sources */,
