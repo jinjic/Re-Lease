@@ -19,7 +19,7 @@ class MyPostsTableViewController: UITableViewController, CreatePostDelegate {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
         
-        self.createPostBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: Selector("presentCreatePostController"))
+        self.createPostBarButtonItem = UIBarButtonItem(image: UIImage(named: "add_listing"), style: .Bordered, target: self, action: Selector("presentSignInController"))
         self.signInBarButtonItem = UIBarButtonItem(title: "Sign In", style: .Bordered, target: self, action: Selector("presentSignInController"))
     }
     
