@@ -43,18 +43,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         // Notifications SetUp
         let myNotifications = NotificationsViewController(style: UITableViewStyle.Plain)
         let myNotificationNavController = UINavigationController(rootViewController: myNotifications)
-
         let myNotificationTabBarItem = UITabBarItem(title: "Notifications", image:UIImage(named: "notifications"), tag: 0 )
-
         myNotificationNavController.tabBarItem = myNotificationTabBarItem
         myNotificationTabBarItem.title = "Notifications"
+        
+        // My Profile Setup
+        let myProfile = ProfileViewController(style: UITableViewStyle.Grouped)
+        let myProfileNavController = UINavigationController(rootViewController: myProfile)
+        let myProfileTabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profile"), tag: 0)
+        myProfileNavController.tabBarItem = myProfileTabBarItem
+        myProfileTabBarItem.title = "Profile"
+        
+        // my Listing setup
+        let myListings = ListingsViewController(style: UITableViewStyle.Plain)
+        let myListingNavController = UINavigationController(rootViewController: myListings)
+        let myListingTabBarItem = UITabBarItem(title: "Listings", image: UIImage(named: "listings"), tag: 0)
+        myListingNavController.tabBarItem = myListingTabBarItem
+        myListingTabBarItem.title = "Rooms"
         
         // current order or tab bar items should be
         // 1. Map View Controller
         // 2. My Posts View Controller
         // 3. Profile??
         // REMEMBER to put the nav controller in the array, not the contrllers themselves
-        tabBarController.viewControllers = [myPostsNavController, myNotificationNavController]
+        tabBarController.viewControllers = [ myListingNavController, myNotificationNavController, myPostsNavController, myProfileNavController]
         
         // set the windown make it visible
         aWindow.rootViewController = tabBarController
