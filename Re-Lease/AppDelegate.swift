@@ -43,12 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         // Notifications SetUp
         let myNotifications = NotificationsViewController(style: UITableViewStyle.Plain)
         let myNotificationNavController = UINavigationController(rootViewController: myNotifications)
-<<<<<<< HEAD
+
         let myNotificationTabBarItem = UITabBarItem(title: "Notifications", image:UIImage(named: "notifications"), tag: 0 )
-=======
-        let myNotificationTabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Bookmarks, tag: 1)
-        
->>>>>>> e24ea4b7e41d5e9bcf2546f65615bfee2cbf5dab
+
         myNotificationNavController.tabBarItem = myNotificationTabBarItem
         myNotificationTabBarItem.title = "Notifications"
         
