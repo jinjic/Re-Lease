@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         // Map View Setup
         let homeScreen = ViewController()
         let navController = UINavigationController(rootViewController: homeScreen)
+        navController.setNavigationBarHidden(false, animated: true)
         
         // My Posts Setup
         let myPostsTableViewController = MyPostsTableViewController(style: UITableViewStyle.Grouped)
