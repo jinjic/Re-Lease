@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         let aWindow = UIWindow(frame: UIScreen.mainScreen().bounds)
         window = aWindow
         
-        let tabBarController: UITabBarController = UITabBarController()
+        let tabBarController: MainTabBarViewController = MainTabBarViewController()
         tabBarController.tabBar.tintColor = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 100)
         // My Posts Setup
         let myPostsTableViewController = MyPostsTableViewController(style: UITableViewStyle.Grouped)
