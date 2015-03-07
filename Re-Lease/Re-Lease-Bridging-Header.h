@@ -16,3 +16,4 @@
 #import <Parse/Parse.h>
 
 #import "Post.h"
+#import "PostLocation.h"

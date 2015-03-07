@@ -17,6 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         // DON'T put anything above this line!!
         Parse.setApplicationId("Rk1d1SEHNmOUlwT76B2uQW6QslXguSw4KbmM6PHk", clientKey: "IQYqfqgdyJaADL7WWhIxskOWyLBN8N7GccJd1oRi")
         
+        //navigation style stuff
+        // styling
+        let navigationBarAppearace = UINavigationBar.appearance()
+        
+        navigationBarAppearace.barTintColor = UIColor(red: 32/255, green: 69/255, blue: 125/255, alpha: 1.0)
+        navigationBarAppearace.tintColor = UIColor.whiteColor()
+        
+        // change navigation item title color
+        navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        
+        
         let aWindow = UIWindow(frame: UIScreen.mainScreen().bounds)
         window = aWindow
         
