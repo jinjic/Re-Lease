@@ -13,7 +13,7 @@ class MyPostsTableViewController: UITableViewController, CreatePostDelegate {
     var createPostBarButtonItem: UIBarButtonItem!
     var signInBarButtonItem: UIBarButtonItem!
     
-    var posts: [Post]!
+    var post: Post!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,14 +33,17 @@ class MyPostsTableViewController: UITableViewController, CreatePostDelegate {
     }
     
     func createPostDidSaveWithPost(post: Post) {
-        
+        self.post = post
+        self.automaticallyAdjustsScrollViewInsets = true
+        self.view = NSBundle.mainBundle().loadNibNamed("PostDetailView", owner: self, options: nil)[0] as UIView
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         self.tableView.backgroundView = nil
-        if self.posts == nil || self.posts?.count == 0  {
+        if self.post == nil  {
             let noPostsView = NSBundle.mainBundle().loadNibNamed("MyPostsNoPostsView", owner: self, options: nil)[0] as UIView
             self.tableView.backgroundView = noPostsView
             self.tableView.separatorStyle = .None
@@ -49,10 +52,6 @@ class MyPostsTableViewController: UITableViewController, CreatePostDelegate {
         
         self.tableView.separatorStyle = .SingleLine
         return 1
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
     }
     
     @IBAction func presentCreatePostController() {

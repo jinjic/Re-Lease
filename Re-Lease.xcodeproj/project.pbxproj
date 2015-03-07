@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020CCF841AAB052F00E95144 /* PostDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020CCF831AAB052F00E95144 /* PostDetailView.xib */; };
 		029A44CF1AAACDA600D88781 /* DatePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029A44CE1AAACDA600D88781 /* DatePickerCell.xib */; };
 		029A44D11AAAD7DF00D88781 /* CreatePostLocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029A44D01AAAD7DF00D88781 /* CreatePostLocationSearchTableViewController.swift */; };
 		029A44D41AAAD90F00D88781 /* PostLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 029A44D31AAAD90F00D88781 /* PostLocation.m */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020CCF831AAB052F00E95144 /* PostDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostDetailView.xib; sourceTree = "<group>"; };
 		029A44CE1AAACDA600D88781 /* DatePickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerCell.xib; sourceTree = "<group>"; };
 		029A44D01AAAD7DF00D88781 /* CreatePostLocationSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostLocationSearchTableViewController.swift; sourceTree = "<group>"; };
 		029A44D21AAAD90F00D88781 /* PostLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostLocation.h; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				029A44CE1AAACDA600D88781 /* DatePickerCell.xib */,
 				029A44D51AAAE00D00D88781 /* MapItemCell.xib */,
 				029A44D71AAAE6A500D88781 /* UtilitiesCell.xib */,
+				020CCF831AAB052F00E95144 /* PostDetailView.xib */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			files = (
 				029A44D81AAAE6A500D88781 /* UtilitiesCell.xib in Resources */,
 				029A44D61AAAE00D00D88781 /* MapItemCell.xib in Resources */,
+				020CCF841AAB052F00E95144 /* PostDetailView.xib in Resources */,
 				029DBA701AAAA3F300F65019 /* MyPostsNoPostsView.xib in Resources */,
 				3C689ADC1AAA80B900B82314 /* LaunchScreen.xib in Resources */,
 				3C689AD91AAA80B900B82314 /* Images.xcassets in Resources */,
