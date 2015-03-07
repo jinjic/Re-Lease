@@ -33,7 +33,7 @@ class CreatePostTableViewController: UITableViewController, CreatePostLocationSe
     
     lazy var dateFormatter: NSDateFormatter = {
         let df = NSDateFormatter()
-        df.dateFormat = "MMM dd"
+        df.dateFormat = "MMMM d, YYYY"
         return df
     }()
     
@@ -77,8 +77,8 @@ class CreatePostTableViewController: UITableViewController, CreatePostLocationSe
         self.navigationItem.rightBarButtonItem = doneButton
         
         self.electricButton.addTarget(self, action: Selector("didTapButton:"), forControlEvents: .TouchUpInside)
-                self.waterButton.addTarget(self, action: Selector("didTapButton:"), forControlEvents: .TouchUpInside)
-                self.gasButton.addTarget(self, action: Selector("didTapButton:"), forControlEvents: .TouchUpInside)
+        self.waterButton.addTarget(self, action: Selector("didTapButton:"), forControlEvents: .TouchUpInside)
+        self.gasButton.addTarget(self, action: Selector("didTapButton:"), forControlEvents: .TouchUpInside)
     }
     
     func didTapCancelButton() {
@@ -86,11 +86,24 @@ class CreatePostTableViewController: UITableViewController, CreatePostLocationSe
     }
     
     func didTapDoneButton() {
-        
-    }
-    
-    func savePost() {
-        self.delegate.createPostDidSaveWithPost(self.newPost)
+        self.newPost.description = self.descriptionTextField.text
+        self.newPost.rent = self.rentTextField.text
+        var utilitiesArray: [String] = []
+        if self.electricButton.selected {
+            utilitiesArray.append("Electric")
+        }
+        if self.waterButton.selected {
+            utilitiesArray.append("Water")
+        }
+        if self.gasButton.selected {
+            utilitiesArray.append("Gas")
+        }
+        self.newPost.utilities = utilitiesArray
+        self.newPost.saveInBackgroundWithBlock { (success: Bool, error: NSError!) -> Void in
+            if error == nil {
+                self.delegate.createPostDidSaveWithPost(self.newPost)
+            }
+        }
     }
     
     // MARK: - Table view data source
