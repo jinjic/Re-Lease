@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyPostsTableViewController: UITableViewController {
+class MyPostsTableViewController: UITableViewController, CreatePostDelegate {
     
     var post: PFObject!
 
@@ -16,8 +16,16 @@ class MyPostsTableViewController: UITableViewController {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
         
-        let createPostItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: nil, action: nil)
+        let createPostItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: Selector("presentCreatePostController"))
         self.navigationItem.setRightBarButtonItems([createPostItem], animated: false)
+    }
+    
+    func createPostDidCancel() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func createPostDidSave() {
+        
     }
 
     // MARK: - Table view data source
@@ -25,7 +33,7 @@ class MyPostsTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         self.tableView.backgroundView = nil
         if self.post == nil {
-            let noPostsView = NSBundle.mainBundle().loadNibNamed("MyPostsNoPostsView", owner: nil, options: nil)[0] as UIView
+            let noPostsView = NSBundle.mainBundle().loadNibNamed("MyPostsNoPostsView", owner: self, options: nil)[0] as UIView
             self.tableView.backgroundView = noPostsView
             self.tableView.separatorStyle = .None
             return 0;
@@ -40,60 +48,11 @@ class MyPostsTableViewController: UITableViewController {
         // Return the number of rows in the section.
         return 0
     }
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
-
-        // Configure the cell...
-
-        return cell
+    
+    @IBAction func presentCreatePostController() {
+        let createPostController = CreatePostTableViewController()
+        createPostController.delegate = self
+        let createNavController = UINavigationController(rootViewController: createPostController)
+        self.presentViewController(createNavController, animated: true, completion: nil)
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

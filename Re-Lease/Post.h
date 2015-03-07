@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Josip Injic. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-@interface Post : PFObject
+@interface Post : PFObject <PFSubclassing>
 
 @end

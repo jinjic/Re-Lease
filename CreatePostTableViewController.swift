@@ -8,7 +8,14 @@
 
 import UIKit
 
+protocol CreatePostDelegate: class {
+    func createPostDidCancel()
+    func createPostDidSave()
+}
+
 class CreatePostTableViewController: UITableViewController {
+    
+    weak var delegate: CreatePostDelegate!
     
     var nameCell: UITableViewCell = UITableViewCell()
     var utilitiesCell: UITableViewCell = UITableViewCell()
@@ -18,36 +25,42 @@ class CreatePostTableViewController: UITableViewController {
     var utilitiesTextField: UITextField = UITextField()
     
     override func loadView() {
-        // set the title
-        self.title = "User Options"
-        
+        super.loadView()
+        self.tableView = UITableView(frame: self.view.bounds, style: .Grouped)
         // construct first name cell, section 0, row 0
         self.nameCell.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5)
         self.nameTextField = UITextField(frame: CGRectInset(self.nameCell.contentView.bounds, 15, 0))
         self.nameTextField.placeholder = "Name"
-        self.nameTextField.addSubview(self.nameTextField)
+        self.nameCell.addSubview(self.nameTextField)
         
         // construct last name cell, section 0, row 1
         self.utilitiesCell.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5)
         self.utilitiesTextField = UITextField(frame: CGRectInset(self.utilitiesCell.contentView.bounds, 15, 0))
         self.utilitiesTextField.placeholder = "Utilities?"
-        self.utilitiesTextField.addSubview(self.utilitiesTextField)
+        self.utilitiesCell.addSubview(self.utilitiesTextField)
         
         // construct share cell, section 1, row 0
-        self.locationCell.textLabel?.text = "Share with Friends"
+        self.locationCell.textLabel?.text = "Find Location"
         self.locationCell.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5)
-        self.locationCell.accessoryType = UITableViewCellAccessoryType.Checkmark
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: Selector("didTapCancelButton"))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: Selector("didTapDoneButton"))
+        self.navigationItem.leftBarButtonItem = cancelButton
+        self.navigationItem.rightBarButtonItem = doneButton
     }
+    
+    func didTapCancelButton() {
+        self.delegate.createPostDidCancel()
+    }
+    
+    func didTapDoneButton() {
+        self.delegate.createPostDidSave()
+    }
+    
     
     // MARK: - Table view data source
     
