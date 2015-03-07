@@ -48,6 +48,8 @@
 		029DBA6E1AAA9C8A00F65019 /* MyPostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029DBA6D1AAA9C8A00F65019 /* MyPostsTableViewController.swift */; };
 		029DBA701AAAA3F300F65019 /* MyPostsNoPostsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029DBA6F1AAAA3F300F65019 /* MyPostsNoPostsView.xib */; };
 		029DBA741AAAB90A00F65019 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 029DBA731AAAB90A00F65019 /* Post.m */; };
+		02B4E1131AAB746B0081A78A /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02B4E1121AAB746B0081A78A /* ProfileView.xib */; };
+		02B4E1151AAB78AE0081A78A /* BorderUiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B4E1141AAB78AE0081A78A /* BorderUiView.swift */; };
 		02CCEC691AAB514300B23FE6 /* IncomingMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02CCEC671AAB514300B23FE6 /* IncomingMessageTableViewCell.xib */; };
 		02CCEC6A1AAB514300B23FE6 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02CCEC681AAB514300B23FE6 /* MessageTableViewCell.xib */; };
 		02CCEC6C1AAB518C00B23FE6 /* MessagesDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CCEC6B1AAB518C00B23FE6 /* MessagesDetailTableViewController.swift */; };
@@ -123,6 +125,8 @@
 		029DBA6F1AAAA3F300F65019 /* MyPostsNoPostsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPostsNoPostsView.xib; sourceTree = "<group>"; };
 		029DBA721AAAB90A00F65019 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		029DBA731AAAB90A00F65019 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		02B4E1121AAB746B0081A78A /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		02B4E1141AAB78AE0081A78A /* BorderUiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderUiView.swift; sourceTree = "<group>"; };
 		02CCEC671AAB514300B23FE6 /* IncomingMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomingMessageTableViewCell.xib; sourceTree = "<group>"; };
 		02CCEC681AAB514300B23FE6 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
 		02CCEC6B1AAB518C00B23FE6 /* MessagesDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesDetailTableViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 				020CCF831AAB052F00E95144 /* PostDetailView.xib */,
 				020CCF8F1AAB355500E95144 /* PreLoginView.xib */,
 				029A44D71AAAE6A500D88781 /* UtilitiesCell.xib */,
+				02B4E1121AAB746B0081A78A /* ProfileView.xib */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				3C689AD11AAA80B900B82314 /* AppDelegate.swift */,
 				020CCF911AAB369B00E95144 /* BorderUIButton.swift */,
 				020CCF991AAB39A200E95144 /* BorderUITextField.swift */,
+				02B4E1141AAB78AE0081A78A /* BorderUiView.swift */,
 				029A44D01AAAD7DF00D88781 /* CreatePostLocationSearchTableViewController.swift */,
 				029DBA6B1AAA9AC900F65019 /* CreatePostTableViewController.swift */,
 				022FE0CD1AAB5339001532CD /* IncomingMessageTableViewCell.swift */,
@@ -396,6 +402,7 @@
 				029A44D61AAAE00D00D88781 /* MapItemCell.xib in Resources */,
 				020CCF841AAB052F00E95144 /* PostDetailView.xib in Resources */,
 				029DBA701AAAA3F300F65019 /* MyPostsNoPostsView.xib in Resources */,
+				02B4E1131AAB746B0081A78A /* ProfileView.xib in Resources */,
 				020CCF981AAB388500E95144 /* LogInViewController.xib in Resources */,
 				3C689ADC1AAA80B900B82314 /* LaunchScreen.xib in Resources */,
 				020CCF901AAB355500E95144 /* PreLoginView.xib in Resources */,
@@ -431,6 +438,7 @@
 				020CCF9A1AAB39A200E95144 /* BorderUITextField.swift in Sources */,
 				022FE0CC1AAB5218001532CD /* MessagesTableView.swift in Sources */,
 				029DBA6E1AAA9C8A00F65019 /* MyPostsTableViewController.swift in Sources */,
+				02B4E1151AAB78AE0081A78A /* BorderUiView.swift in Sources */,
 				022FE0CF1AAB5339001532CD /* IncomingMessageTableViewCell.swift in Sources */,
 				022FE0CB1AAB5218001532CD /* KeyboardBar.swift in Sources */,
 				3CC2CB741AAB0F8700EF6C61 /* ProfileViewController.swift in Sources */,

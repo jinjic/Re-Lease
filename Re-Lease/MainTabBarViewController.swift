@@ -30,8 +30,8 @@ class MainTabBarViewController: UITabBarController {
             self.logoFull.transform = CGAffineTransformIdentity
             }, completion: nil)
         UIView.animateWithDuration(2, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.25, options: .CurveEaseInOut, animations: { () -> Void in
-            self.leftArrow.transform = CGAffineTransformMakeTranslation(-self.view.frame.width, 0)
-            self.rightArrow.transform = CGAffineTransformMakeTranslation(self.view.frame.width, 0)
+            self.leftArrow.transform = CGAffineTransformMakeTranslation(-self.view.frame.width / 2, 0)
+            self.rightArrow.transform = CGAffineTransformMakeTranslation(self.view.frame.width / 2, 0)
             }, completion: { (Bool) -> Void in
                 UIView.animateWithDuration(1, animations: { () -> Void in
                     self.animationView.alpha = 0
