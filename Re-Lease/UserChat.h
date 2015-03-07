@@ -13,5 +13,6 @@
 @property (nonatomic, copy) NSString *desc;
 @property (nonatomic, copy) NSString *roomId;
 @property (nonatomic, strong) PFUser *user;
+@property (nonatomic, copy) NSString *lastMessage;
 
 @end

@@ -17,3 +17,5 @@
 
 #import "Post.h"
 #import "PostLocation.h"
+#import "UserChat.h"
+#import "Message.h"
