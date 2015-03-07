@@ -161,12 +161,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         manager.delegate = nil
     }
     
-    func notificationsClicked() {
-        
-        let notificaitonsViewController: notificationsViewController = notificationsViewController()
-        self.navigationController?.pushViewController(notificaitonsViewController, animated: true)
-    }
-    
 }
 
 
