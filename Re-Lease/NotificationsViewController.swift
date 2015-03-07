@@ -11,10 +11,20 @@ import UIKit
 class NotificationsViewController: UITableViewController {
     
     
-    var segmentControl = UISegmentedControl()
     let cellIdentifier = "cell"
     let items: [String] = ["Tommy Groomes", "Steven Covey", "Ashley Jackson"]
     var subtitles: [String] = ["Today", "Yesterday", "3 days ago"]
+    
+    lazy var segmentedControl: UISegmentedControl = {
+        let array: [String] = ["Views", "Messages"]
+        let control = UISegmentedControl(items: array)
+        control.sizeToFit()
+        control.selectedSegmentIndex = 0
+        control.addTarget(self, action: Selector("controlSwitch"), forControlEvents: UIControlEvents.ValueChanged)
+        
+        return control
+    }()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +32,12 @@ class NotificationsViewController: UITableViewController {
 
         view.backgroundColor = UIColor.whiteColor()
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        navigationItem.title = "Notifications"
+        self.navigationItem.titleView = UISegmentedControl()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        self.navigationItem.titleView = segmentedControl
+        
         
     }
     

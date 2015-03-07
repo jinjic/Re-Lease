@@ -32,26 +32,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         window = aWindow
         
         let tabBarController: UITabBarController = UITabBarController()
-        
-        // Map View Setup
-        let homeScreen = ViewController()
-        let navController = UINavigationController(rootViewController: homeScreen)
-        navController.setNavigationBarHidden(false, animated: true)
-        
+        tabBarController.tabBar.tintColor = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 100)
         // My Posts Setup
         let myPostsTableViewController = MyPostsTableViewController(style: UITableViewStyle.Grouped)
         let myPostsNavController = UINavigationController(rootViewController: myPostsTableViewController)
-        let myPostsTabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.TopRated, tag: 0)
-    
+        let myPostsTabBarItem = UITabBarItem(title: "My Post", image: UIImage(named: "my_listings"), tag: 0)
         myPostsNavController.tabBarItem = myPostsTabBarItem
-        myPostsNavController.title = "My Posts"
+        myPostsTabBarItem.title = "My Posts"
         
         // Notifications SetUp
         let myNotifications = NotificationsViewController(style: UITableViewStyle.Plain)
         let myNotificationNavController = UINavigationController(rootViewController: myNotifications)
-        let myNotificationTabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Bookmarks, tag: 1)
-//        UITabBarItem(title: <#String?#>, image: <#UIImage?#>, selectedImage: <#UIImage?#>)
-        
+        let myNotificationTabBarItem = UITabBarItem(title: "Notifications", image:UIImage(named: "notifications"), tag: 0 )
         myNotificationNavController.tabBarItem = myNotificationTabBarItem
         myNotificationTabBarItem.title = "Notifications"
         
@@ -60,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         // 2. My Posts View Controller
         // 3. Profile??
         // REMEMBER to put the nav controller in the array, not the contrllers themselves
-        tabBarController.viewControllers = [navController, myPostsNavController, myNotificationNavController]
+        tabBarController.viewControllers = [myPostsNavController, myNotificationNavController]
         
         // set the windown make it visible
         aWindow.rootViewController = tabBarController
