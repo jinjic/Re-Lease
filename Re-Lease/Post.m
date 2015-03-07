@@ -11,7 +11,7 @@
 
 @implementation Post
 
-@dynamic description, rent, utilities, startDate, endDate, location;
+@dynamic name, rent, utilities, startDate, endDate, location;
 
 + (void)load {
     dispatch_once_t onceToken = 0;
