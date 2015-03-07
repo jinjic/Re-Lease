@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogInViewController" customModule="Re_Lease" customModuleProvider="target">
+            <connections>
+                <outlet property="passwordTextField" destination="GVT-E1-9Rw" id="PY4-eC-7W1"/>
+                <outlet property="usernameTextField" destination="k6o-NO-3g5" id="rkz-Aw-7bT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_condensed" translatesAutoresizingMaskIntoConstraints="NO" id="WgY-aq-bec">
+                    <rect key="frame" x="163" y="57" width="274" height="196"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="196" id="pzc-qA-Bmc"/>
+                        <constraint firstAttribute="width" constant="274" id="slP-cx-png"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k6o-NO-3g5" customClass="BorderUITextField" customModule="Re_Lease" customModuleProvider="target">
+                    <rect key="frame" x="45" y="306" width="509" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="pbB-Sj-pWq"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guZ-Ah-dLO" customClass="BorderUIButton" customModule="Re_Lease" customModuleProvider="target">
+                    <rect key="frame" x="194" y="470" width="212" height="57"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="212" id="51L-Pf-0PI"/>
+                        <constraint firstAttribute="height" constant="57" id="dBB-Ye-tg5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="Log In">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTapLogInButton:" destination="-1" eventType="touchUpInside" id="M25-Ma-v2x"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GVT-E1-9Rw" customClass="BorderUITextField" customModule="Re_Lease" customModuleProvider="target">
+                    <rect key="frame" x="45" y="374" width="509" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="klI-qN-o7G"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="GVT-E1-9Rw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="45" id="7lR-0B-nvp"/>
+                <constraint firstAttribute="trailing" secondItem="GVT-E1-9Rw" secondAttribute="trailing" constant="46" id="7oM-cQ-zMm"/>
+                <constraint firstItem="GVT-E1-9Rw" firstAttribute="top" secondItem="k6o-NO-3g5" secondAttribute="bottom" constant="23" id="JdF-On-Qpd"/>
+                <constraint firstAttribute="centerX" secondItem="k6o-NO-3g5" secondAttribute="centerX" id="Qcv-ni-WK6"/>
+                <constraint firstItem="guZ-Ah-dLO" firstAttribute="centerX" secondItem="WgY-aq-bec" secondAttribute="centerX" id="TkK-9I-zjO"/>
+                <constraint firstItem="guZ-Ah-dLO" firstAttribute="top" secondItem="GVT-E1-9Rw" secondAttribute="bottom" constant="51" id="XY0-J5-SxB"/>
+                <constraint firstItem="GVT-E1-9Rw" firstAttribute="trailing" secondItem="k6o-NO-3g5" secondAttribute="trailing" id="Z4p-XV-9Cm"/>
+                <constraint firstAttribute="centerX" secondItem="GVT-E1-9Rw" secondAttribute="centerX" id="b8P-8f-Nld"/>
+                <constraint firstItem="GVT-E1-9Rw" firstAttribute="leading" secondItem="k6o-NO-3g5" secondAttribute="leading" id="kVi-7S-Sff"/>
+                <constraint firstAttribute="centerX" secondItem="WgY-aq-bec" secondAttribute="centerX" id="qcT-qz-UIP"/>
+                <constraint firstItem="WgY-aq-bec" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="57" id="u6V-6x-8ir"/>
+                <constraint firstAttribute="bottom" secondItem="guZ-Ah-dLO" secondAttribute="bottom" constant="73" id="wjB-0B-3ar"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Qcv-ni-WK6"/>
+                    <exclude reference="b8P-8f-Nld"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo_condensed" width="1353" height="967"/>
+    </resources>
+</document>

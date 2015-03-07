@@ -86,7 +86,7 @@ class CreatePostTableViewController: UITableViewController, CreatePostLocationSe
     }
     
     func didTapDoneButton() {
-        self.newPost.description = self.descriptionTextField.text
+        self.newPost.name = self.descriptionTextField.text
         self.newPost.rent = self.rentTextField.text
         var utilitiesArray: [String] = []
         if self.electricButton.selected {
