@@ -1,17 +1,17 @@
 //
-//  Post.m
+//  PostLocation.m
 //  Re-Lease
 //
-//  Created by Alois Barreras on 3/6/15.
+//  Created by Alois Barreras on 3/7/15.
 //  Copyright (c) 2015 Josip Injic. All rights reserved.
 //
 
-#import "Post.h"
+#import "PostLocation.h"
 #import <Parse/PFObject+Subclass.h>
 
-@implementation Post
+@implementation PostLocation
 
-@dynamic description, rent, utilities, pets, startDate, endDate;
+@dynamic name, location, address;
 
 + (void)load {
     dispatch_once_t onceToken = 0;
@@ -21,7 +21,7 @@
 }
 
 + (NSString *)parseClassName {
-    return @"Post";
+    return @"PostLocation";
 }
 
 @end

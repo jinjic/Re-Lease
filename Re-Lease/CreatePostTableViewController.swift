@@ -180,7 +180,7 @@ class CreatePostTableViewController: UITableViewController {
             
             if !sameCellClicked {
                 // the index path to insert the date picker
-                cell?.detailTextLabel?.textColor = UIColor(red: 32/255, green: 69/255, blue: 125/255, alpha: 1)
+                cell?.detailTextLabel?.textColor = UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1)
                 var newRow: Int = before ? indexPath.row : indexPath.row + 1
                 var newIndexPath: NSIndexPath = NSIndexPath(forRow: newRow, inSection: 1)
                 self.datePickerIndexPath = newIndexPath
@@ -188,7 +188,7 @@ class CreatePostTableViewController: UITableViewController {
             }
             tableView.endUpdates()
         } else if cell?.reuseIdentifier == "DefaultLocationCell" || cell?.reuseIdentifier == "PostLocationCell" {
-//            self.performSegueWithIdentifier("LocationSearchSegue", sender: self)
+            self.performSegueWithIdentifier("LocationSearchSegue", sender: self)
         }
     }
     
