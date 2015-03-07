@@ -12,6 +12,7 @@ class ListingsViewController: PFQueryTableViewController {
     
     var cell = PFTableViewCell()
     let cellIdentifier = "cell"
+    var selMake = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,6 @@ class ListingsViewController: PFQueryTableViewController {
         self.parseClassName = "Post"
         navigationItem.title = "Rooms"
         self.loadObjects()
-        
     }
     
     override func queryForTable() -> PFQuery! {
@@ -41,8 +41,6 @@ class ListingsViewController: PFQueryTableViewController {
         cell?.textLabel?.text = post.name
         cell?.detailTextLabel?.text = post.rent
 
-     
-        
         return cell
     }
 
@@ -52,6 +50,24 @@ class ListingsViewController: PFQueryTableViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 66
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("You selected cell #\(indexPath.row)!")
+        
+        let indiePostViewController: IndiePostViewController = IndiePostViewController()
+        let post = self.objects[indexPath.row] as Post
+        indiePostViewController.post = post
+        indiePostViewController.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(indiePostViewController, animated: true)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if(segue.identifier == "indiePost") {
+            var vc = segue.destinationViewController as IndiePostViewController
+        
+        }
     }
 
     override func didReceiveMemoryWarning() {

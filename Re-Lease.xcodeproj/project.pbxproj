@@ -43,6 +43,7 @@
 		029DBA6E1AAA9C8A00F65019 /* MyPostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029DBA6D1AAA9C8A00F65019 /* MyPostsTableViewController.swift */; };
 		029DBA701AAAA3F300F65019 /* MyPostsNoPostsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029DBA6F1AAAA3F300F65019 /* MyPostsNoPostsView.xib */; };
 		029DBA741AAAB90A00F65019 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 029DBA731AAAB90A00F65019 /* Post.m */; };
+		3C0413341AAB49DA00792B89 /* IndiePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0413331AAB49DA00792B89 /* IndiePostViewController.swift */; };
 		3C689AD21AAA80B900B82314 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C689AD11AAA80B900B82314 /* AppDelegate.swift */; };
 		3C689AD41AAA80B900B82314 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C689AD31AAA80B900B82314 /* ViewController.swift */; };
 		3C689AD91AAA80B900B82314 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C689AD81AAA80B900B82314 /* Images.xcassets */; };
@@ -110,6 +111,7 @@
 		029DBA6F1AAAA3F300F65019 /* MyPostsNoPostsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPostsNoPostsView.xib; sourceTree = "<group>"; };
 		029DBA721AAAB90A00F65019 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		029DBA731AAAB90A00F65019 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		3C0413331AAB49DA00792B89 /* IndiePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndiePostViewController.swift; sourceTree = "<group>"; };
 		3C689ACC1AAA80B900B82314 /* Re-Lease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Re-Lease.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C689AD01AAA80B900B82314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C689AD11AAA80B900B82314 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				029A44D01AAAD7DF00D88781 /* CreatePostLocationSearchTableViewController.swift */,
 				029DBA6B1AAA9AC900F65019 /* CreatePostTableViewController.swift */,
 				3CC2CB751AAB0FAC00EF6C61 /* ListingsViewController.swift */,
+				3C0413331AAB49DA00792B89 /* IndiePostViewController.swift */,
 				020CCF951AAB388500E95144 /* LogInViewController.swift */,
 				020CCF851AAB1BFE00E95144 /* MainTabBarViewController.swift */,
 				029DBA6D1AAA9C8A00F65019 /* MyPostsTableViewController.swift */,
@@ -407,6 +410,7 @@
 				029A44D11AAAD7DF00D88781 /* CreatePostLocationSearchTableViewController.swift in Sources */,
 				029DBA6C1AAA9AC900F65019 /* CreatePostTableViewController.swift in Sources */,
 				020CCF971AAB388500E95144 /* LogInViewController.swift in Sources */,
+				3C0413341AAB49DA00792B89 /* IndiePostViewController.swift in Sources */,
 				020CCF921AAB369B00E95144 /* BorderUIButton.swift in Sources */,
 				020CCF8E1AAB324D00E95144 /* Message.m in Sources */,
 				3CC2CB761AAB0FAC00EF6C61 /* ListingsViewController.swift in Sources */,
