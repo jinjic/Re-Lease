@@ -28,8 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         navController.setNavigationBarHidden(false, animated: true)
         
         // My Posts Setup
-        let myPostsTableViewController = MyPostsTableViewController()
+        let myPostsTableViewController = MyPostsTableViewController(style: UITableViewStyle.Grouped)
         let myPostsNavController = UINavigationController(rootViewController: myPostsTableViewController)
+        let myPostsTabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.TopRated, tag: 0)
+        myPostsNavController.tabBarItem = myPostsTabBarItem
+        myPostsNavController.title = "My Posts"
         
         let notificationViewController = NotificationsViewController()
         let navigationViewController = UINavigationController(rootViewController: notificationViewController)
